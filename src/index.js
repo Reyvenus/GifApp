@@ -1,17 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+import {GifExperApp} from "./GifExperApp"
+import "./index.css"
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// ReactDOM.render(
+//     <App/>,                                                   //|
+//     document.getElementById("root")                           //| React 17   
+//     //document.querySelector("#root") es lo mismo q la linea 6  |
+// )
+
+// //React 18
+// const idHtml = document.getElementById("root")
+// const root = ReactDOM.createRoot(idHtml)
+// root.render(<App/>)
+
+//Otra forma
+
+ReactDOM.createRoot(document.getElementById("root")).render(<GifExperApp />)
